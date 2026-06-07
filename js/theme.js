@@ -9,10 +9,10 @@ function initTheme() {
         if(iconMoon) iconMoon.style.display = isDark ? 'none' : 'block';
         if(iconSun) iconSun.style.display = isDark ? 'block' : 'none';
 
-        // Keep header logo consistent
+        // Switch header logo based on theme
         const logoImg = document.querySelector('.logo img');
         if (logoImg) {
-            logoImg.src = 'assets/logo_light.png';
+            logoImg.src = isDark ? 'assets/logo_dark.png' : 'assets/logo_light.png';
         }
 
         const themeColor = isDark ? '#1C1F1D' : '#F9FAF9';
