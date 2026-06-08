@@ -33,9 +33,9 @@ function initTheme() {
         }, 0);
     };
 
-    // Check saved preference
+    // Check saved preference (defaults to light mode if not set)
     const savedTheme = localStorage.getItem('theme');
-    updateTheme(savedTheme !== 'light');
+    updateTheme(savedTheme === 'dark');
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
